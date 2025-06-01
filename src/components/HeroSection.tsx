@@ -1,17 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin } from "lucide-react";
+
 const HeroSection = () => {
   const openWhatsApp = () => {
     window.open('https://wa.me/5584998561010?text=Ol%C3%A1', '_blank');
   };
+
   const openMaps = () => {
     window.open('https://maps.app.goo.gl/9QTfxxkAjnFn6Srq6', '_blank');
   };
-  return <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natural-green via-natural-green-light to-accent overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-natural-orange rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-natural-off-white rounded-full blur-3xl"></div>
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-natural-green via-natural-green-light to-accent overflow-hidden">
+      {/* Enhanced Background Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-natural-orange rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-natural-off-white rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-natural-orange/80 rounded-full blur-2xl animate-bounce delay-500"></div>
+        <div className="absolute top-20 right-20 w-16 h-16 bg-natural-off-white/60 rounded-full blur-xl animate-pulse delay-700"></div>
+        <div className="absolute bottom-20 left-20 w-20 h-20 bg-natural-orange/70 rounded-full blur-xl animate-bounce delay-300"></div>
+        
+        {/* Floating particles */}
+        <div className="absolute top-32 left-1/3 w-3 h-3 bg-natural-orange rounded-full animate-ping delay-200"></div>
+        <div className="absolute bottom-32 right-1/3 w-2 h-2 bg-natural-off-white rounded-full animate-ping delay-500"></div>
+        <div className="absolute top-1/3 right-1/5 w-4 h-4 bg-natural-orange/80 rounded-full animate-ping delay-1000"></div>
+        
+        {/* Moving gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-natural-orange/5 to-transparent animate-slide-right"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -47,6 +62,8 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-1 h-8 bg-natural-off-white/50 rounded-full"></div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
