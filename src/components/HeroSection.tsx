@@ -34,10 +34,12 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={openWhatsApp}
-              className="bg-natural-orange hover:bg-natural-orange-warm text-natural-gray-dark font-body font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-3 text-lg"
+              className="bg-whatsapp hover:bg-whatsapp-dark text-white font-body font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3 text-lg shadow-2xl hover:shadow-whatsapp/25 animate-pulse-whatsapp relative overflow-hidden group"
             >
-              <MessageCircle className="w-6 h-6" />
-              Fale Conosco no WhatsApp
+              <div className="absolute inset-0 bg-gradient-to-r from-whatsapp-light/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <MessageCircle className="w-6 h-6 relative z-10" />
+              <span className="relative z-10">Fale Conosco no WhatsApp</span>
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-natural-orange rounded-full animate-ping"></div>
             </Button>
             
             <Button 

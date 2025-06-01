@@ -26,25 +26,32 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#3A5A40',
+					DEFAULT: '#4D9E14',
 					foreground: '#F8F9FA'
 				},
 				secondary: {
-					DEFAULT: '#F4A261',
-					foreground: '#343A40'
+					DEFAULT: '#7CB342',
+					foreground: '#FFFFFF'
 				},
 				accent: {
-					DEFAULT: '#588157',
+					DEFAULT: '#689F38',
 					foreground: '#F8F9FA'
 				},
 				natural: {
-					green: '#3A5A40',
-					'green-light': '#588157',
-					orange: '#F4A261',
-					'orange-warm': '#E76F51',
+					green: '#4D9E14',
+					'green-light': '#7CB342',
+					'green-dark': '#2E7D32',
+					orange: '#FF9800',
+					'orange-warm': '#F57C00',
+					'orange-light': '#FFB74D',
 					'off-white': '#F8F9FA',
 					'gray-medium': '#ADB5BD',
 					'gray-dark': '#343A40'
+				},
+				whatsapp: {
+					DEFAULT: '#25D366',
+					dark: '#128C7E',
+					light: '#DCF8C6'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -86,11 +93,22 @@ export default {
 					'100%': {
 						transform: 'translateX(-100%)'
 					}
+				},
+				'pulse-whatsapp': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						boxShadow: '0 0 0 0 rgba(37, 211, 102, 0.7)'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						boxShadow: '0 0 0 10px rgba(37, 211, 102, 0)'
+					}
 				}
 			},
 			animation: {
 				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-right': 'slide-right 20s linear infinite'
+				'slide-right': 'slide-right 20s linear infinite',
+				'pulse-whatsapp': 'pulse-whatsapp 2s infinite'
 			},
 			fontFamily: {
 				'title': ['Montserrat', 'sans-serif'],

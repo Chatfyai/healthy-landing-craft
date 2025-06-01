@@ -23,7 +23,7 @@ const ProductCategories = () => {
       title: "Produtos a Granel",
       description: "Cereais, farinhas e sementes",
       image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop&crop=center",
-      bgColor: "bg-natural-orange"
+      bgColor: "bg-natural-green-dark"
     }
   ];
 

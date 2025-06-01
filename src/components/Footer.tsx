@@ -20,15 +20,16 @@ const Footer = () => {
             <div className="flex space-x-4">
               <button 
                 onClick={openWhatsApp}
-                className="w-10 h-10 bg-natural-orange hover:bg-natural-orange-warm rounded-full flex items-center justify-center transition-colors duration-300"
+                className="w-12 h-12 bg-whatsapp hover:bg-whatsapp-dark rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-whatsapp/25 relative group"
               >
-                <MessageCircle className="w-5 h-5 text-natural-gray-dark" />
+                <MessageCircle className="w-6 h-6 text-white" />
+                <div className="absolute inset-0 rounded-full bg-whatsapp-light opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </button>
-              <button className="w-10 h-10 bg-natural-off-white/10 hover:bg-natural-off-white/20 rounded-full flex items-center justify-center transition-colors duration-300">
-                <Instagram className="w-5 h-5" />
+              <button className="w-12 h-12 bg-natural-off-white/10 hover:bg-natural-off-white/20 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                <Instagram className="w-6 h-6" />
               </button>
-              <button className="w-10 h-10 bg-natural-off-white/10 hover:bg-natural-off-white/20 rounded-full flex items-center justify-center transition-colors duration-300">
-                <Facebook className="w-5 h-5" />
+              <button className="w-12 h-12 bg-natural-off-white/10 hover:bg-natural-off-white/20 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                <Facebook className="w-6 h-6" />
               </button>
             </div>
           </div>
