@@ -1,4 +1,3 @@
-
 import { Clock, MapPin, Phone } from "lucide-react";
 
 const LocationMap = () => {
@@ -25,9 +24,9 @@ const LocationMap = () => {
                   Endereço
                 </h3>
                 <p className="font-body text-natural-gray-dark">
-                  Rua das Vitaminas, 123<br />
-                  Bairro Saúde - São Paulo - SP<br />
-                  CEP: 01234-567
+                  Avenida Coronel Jose Bezerra, 93A<br />
+                  Centro - Currais Novos - RN<br />
+                  CEP: 59380-000
                 </p>
               </div>
             </div>
@@ -41,9 +40,8 @@ const LocationMap = () => {
                   Horário de Funcionamento
                 </h3>
                 <div className="font-body text-natural-gray-dark space-y-1">
-                  <p>Segunda a Sexta: 8h às 19h</p>
-                  <p>Sábado: 8h às 17h</p>
-                  <p>Domingo: 9h às 13h</p>
+                  <p>Segunda a Sexta: 7h às 18h</p>
+                  <p>Sábado: 7h às 12h</p>
                 </div>
               </div>
             </div>
@@ -57,8 +55,7 @@ const LocationMap = () => {
                   Contato
                 </h3>
                 <div className="font-body text-natural-gray-dark space-y-1">
-                  <p>📞 (11) 9999-9999</p>
-                  <p>📧 contato@vitanaturalis.com.br</p>
+                  <p>📞 (84) 99856-1010</p>
                 </div>
               </div>
             </div>
@@ -66,7 +63,7 @@ const LocationMap = () => {
           
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1!2d-46.6!3d-23.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMwJzAwLjAiUyA0NsKwMzYnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9934596995186!2d-36.51613820000001!3d-6.2645893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b1d7e0c6e76a5f%3A0xb7bc319dbafae56c!2sLoja%20de%20Produtos%20Naturais%20e%20Suplementos%20-%20Naturalys!5e0!3m2!1spt-BR!2sbr!4v1748782741823!5m2!1spt-BR!2sbr"
               width="100%"
               height="400"
               style={{ border: 0 }}

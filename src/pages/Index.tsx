@@ -1,4 +1,3 @@
-
 import HeroSection from "@/components/HeroSection";
 import ValueProposition from "@/components/ValueProposition";
 import ProductCategories from "@/components/ProductCategories";
@@ -6,7 +5,7 @@ import BrandsCarousel from "@/components/BrandsCarousel";
 import ConvenienceInfo from "@/components/ConvenienceInfo";
 import CTASection from "@/components/CTASection";
 import LocationMap from "@/components/LocationMap";
-import Footer from "@/components/Footer";
+import OrderButton from "@/components/OrderButton";
 
 const Index = () => {
   return (
@@ -18,7 +17,7 @@ const Index = () => {
       <ConvenienceInfo />
       <CTASection />
       <LocationMap />
-      <Footer />
+      <OrderButton />
     </div>
   );
 };

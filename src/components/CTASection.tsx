@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin } from "lucide-react";
 
@@ -25,13 +24,15 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={openWhatsApp}
-              className="group relative bg-gradient-to-r from-whatsapp to-whatsapp-dark hover:from-whatsapp-dark hover:to-whatsapp text-white font-body font-semibold px-10 py-4 rounded-3xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 flex items-center gap-3 text-lg shadow-xl hover:shadow-2xl hover:shadow-whatsapp/40 overflow-hidden"
+              variant="outline"
+              className="group relative border-2 border-whatsapp/80 bg-whatsapp/10 backdrop-blur-sm text-whatsapp hover:bg-whatsapp hover:text-white hover:border-whatsapp font-body font-semibold px-10 py-4 rounded-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 flex items-center gap-3 text-lg shadow-lg hover:shadow-xl hover:shadow-whatsapp/30 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-              <MessageCircle className="w-6 h-6 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
+              <div className="absolute inset-0 rounded-2xl bg-whatsapp/20 animate-pulse opacity-50 group-hover:opacity-0 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-whatsapp/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+              <MessageCircle className="w-6 h-6 relative z-10 group-hover:rotate-12 transition-transform duration-300 drop-shadow-sm" />
               <span className="relative z-10">Fale Conosco no WhatsApp</span>
-              <div className="absolute top-0 right-2 w-2 h-2 bg-natural-orange rounded-full animate-pulse"></div>
+              <div className="absolute top-1 right-3 w-3 h-3 bg-whatsapp rounded-full animate-ping opacity-75"></div>
+              <div className="absolute top-1.5 right-3.5 w-2 h-2 bg-whatsapp rounded-full"></div>
             </Button>
             
             <Button 

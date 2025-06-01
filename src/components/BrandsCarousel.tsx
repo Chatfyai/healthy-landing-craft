@@ -1,37 +1,25 @@
-
 import { useEffect, useState } from "react";
 
 const BrandsCarousel = () => {
   const brands = [
-    { name: "Integralmedica", logo: "🏋️" },
-    { name: "Growth", logo: "🌱" },
-    { name: "Optimum Nutrition", logo: "💪" },
-    { name: "Universal", logo: "🔥" },
-    { name: "Max Titanium", logo: "⚡" },
-    { name: "Probiótica", logo: "🧬" },
-    { name: "Vitafor", logo: "🍃" },
-    { name: "Darkness", logo: "🌙" },
-    { name: "Midway", logo: "🎯" },
-    { name: "Essential", logo: "💊" }
+    "Integralmedica",
+    "Growth", 
+    "Flora Nativa do Brasil",
+    "Global",
+    "Max Titanium",
+    "Color Andina",
+    "Vitafor",
+    "Darkness",
+    "Nutrial",
+    "Herbavitae",
+    "Seiva Real",
+    "Bioklein",
+    "Bold",
+    "Copra"
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % brands.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [brands.length]);
-
-  const getVisibleBrands = () => {
-    const visible = [];
-    for (let i = 0; i < 5; i++) {
-      visible.push(brands[(currentIndex + i) % brands.length]);
-    }
-    return visible;
-  };
+  // Duplicar as marcas para criar loop infinito
+  const duplicatedBrands = [...brands, ...brands];
 
   return (
     <section className="py-12 bg-natural-off-white border-y border-natural-gray-medium/20">
@@ -46,25 +34,22 @@ const BrandsCarousel = () => {
         </div>
         
         <div className="relative overflow-hidden">
-          <div className="flex justify-center items-center space-x-8 sm:space-x-12">
-            {getVisibleBrands().map((brand, index) => (
+          <div className="flex animate-scroll space-x-8 sm:space-x-12">
+            {duplicatedBrands.map((brand, index) => (
               <div 
-                key={`${brand.name}-${index}`}
-                className="flex flex-col items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 min-w-[120px]"
+                key={`${brand}-${index}`}
+                className="text-center flex-shrink-0 transition-all duration-300 transform hover:scale-105"
               >
-                <div className="text-4xl mb-2 filter grayscale hover:grayscale-0 transition-all duration-300">
-                  {brand.logo}
-                </div>
-                <span className="font-body text-sm text-natural-gray-dark text-center font-medium">
-                  {brand.name}
+                <span className="font-body text-base sm:text-lg text-natural-gray-dark font-medium whitespace-nowrap hover:text-natural-green transition-colors duration-300 border-2 border-white rounded-2xl px-6 py-3 bg-white/60 backdrop-blur-sm shadow-sm">
+                  {brand}
                 </span>
               </div>
             ))}
           </div>
           
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-natural-off-white to-transparent pointer-events-none"></div>
-          <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-natural-off-white to-transparent pointer-events-none"></div>
+          <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-natural-off-white to-transparent pointer-events-none z-10"></div>
+          <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-natural-off-white to-transparent pointer-events-none z-10"></div>
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@ const ConvenienceInfo = () => {
     {
       icon: Truck,
       title: "Entrega",
-      description: "Receba em casa! Entrega grátis a partir de R$30 na região. Para outras localidades, frete grátis acima de R$100."
+      description: "Receba em casa! Entrega grátis a partir de R$30 em currais Novos. Para outras localidades, frete grátis acima de R$100."
     },
     {
       icon: CreditCard,
