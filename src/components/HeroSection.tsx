@@ -37,7 +37,8 @@ const HeroSection = () => {
           alt="Casal correndo ao pôr do sol"
           className="w-full h-full object-cover"
         />
-        {/* Overlay removido para mostrar imagem normal */}
+        {/* Overlay preto com transparência para escurecer o fundo mas deixar a imagem visível */}
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       {/* Reduced Organic Particles Background - menos visível */}
