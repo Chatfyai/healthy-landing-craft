@@ -4,11 +4,11 @@ import { MessageCircle, MapPin } from "lucide-react";
 
 const CTASection = () => {
   const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os produtos da VitaNaturalis', '_blank');
+    window.open('https://wa.me/5584998561010?text=Ol%C3%A1', '_blank');
   };
 
   const openMaps = () => {
-    window.open('https://maps.google.com/?q=Rua+das+Vitaminas,+123+-+São+Paulo+-+SP', '_blank');
+    window.open('https://maps.app.goo.gl/9QTfxxkAjnFn6Srq6', '_blank');
   };
 
   return (
@@ -25,20 +25,21 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={openWhatsApp}
-              className="bg-whatsapp hover:bg-whatsapp-dark text-white font-body font-semibold px-10 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3 text-lg shadow-2xl hover:shadow-whatsapp/25 animate-pulse-whatsapp relative overflow-hidden group"
+              className="group relative bg-gradient-to-r from-whatsapp to-whatsapp-dark hover:from-whatsapp-dark hover:to-whatsapp text-white font-body font-semibold px-10 py-4 rounded-3xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 flex items-center gap-3 text-lg shadow-xl hover:shadow-2xl hover:shadow-whatsapp/40 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-whatsapp-light/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <MessageCircle className="w-6 h-6 relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+              <MessageCircle className="w-6 h-6 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
               <span className="relative z-10">Fale Conosco no WhatsApp</span>
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-natural-orange-light rounded-full animate-ping"></div>
+              <div className="absolute top-0 right-2 w-2 h-2 bg-natural-orange rounded-full animate-pulse"></div>
             </Button>
             
             <Button 
               onClick={openMaps}
               variant="outline"
-              className="border-2 border-natural-off-white text-natural-off-white hover:bg-natural-off-white hover:text-natural-green font-body font-semibold px-10 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-3 text-lg"
+              className="group border-2 border-natural-off-white/60 bg-natural-off-white/10 backdrop-blur-sm text-natural-off-white hover:bg-natural-off-white hover:text-natural-green font-body font-semibold px-10 py-4 rounded-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 flex items-center gap-3 text-lg shadow-lg hover:shadow-xl"
             >
-              <MapPin className="w-6 h-6" />
+              <MapPin className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
               Veja Nossa Localização
             </Button>
           </div>
